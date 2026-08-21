@@ -1,26 +1,26 @@
 class Proof < Formula
   desc "ReqProof CLI for requirements, traceability, and formal verification"
   homepage "https://github.com/probelabs/reqproof"
-  version "0.1.0-main.20260821204932"
+  version "0.1.0-main.20260821214335"
   license :cannot_represent
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://downloads.reqproof.com/releases/0.1.0-main.20260821204932/proof_0.1.0-main.20260821204932_darwin_arm64.tar.gz"
-      sha256 "d08a42df742394cbf691a268629455087c3f64f95db468ff06d0e86db4109553"
+      url "https://downloads.reqproof.com/releases/0.1.0-main.20260821214335/proof_0.1.0-main.20260821214335_darwin_arm64.tar.gz"
+      sha256 "5837aacd1a97fad10e65a97625b32f8e26b43f20442a632eecbbe6a5eef02d5c"
     else
-      url "https://downloads.reqproof.com/releases/0.1.0-main.20260821204932/proof_0.1.0-main.20260821204932_darwin_amd64.tar.gz"
-      sha256 "35456225fb3d04775eacbcfa1b4133a2ce9ac39745b81575eea82d8dd5ebbbbd"
+      url "https://downloads.reqproof.com/releases/0.1.0-main.20260821214335/proof_0.1.0-main.20260821214335_darwin_amd64.tar.gz"
+      sha256 "eaf46fe18dfa4d8ed9895af94f417d9be8e3cbcb45b612461c927dc1ba2e0054"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.intel?
-      url "https://downloads.reqproof.com/releases/0.1.0-main.20260821204932/proof_0.1.0-main.20260821204932_linux_arm64.tar.gz"
-      sha256 "e35171039d19fc708c5edb68064ce6c983857f860723b167250463741ac7c0c0"
+      url "https://downloads.reqproof.com/releases/0.1.0-main.20260821214335/proof_0.1.0-main.20260821214335_linux_arm64.tar.gz"
+      sha256 "de8034525aead1496413efe057dedea09bd4d44115285a4976f8c907dc6cfa64"
     else
-      url "https://downloads.reqproof.com/releases/0.1.0-main.20260821204932/proof_0.1.0-main.20260821204932_linux_amd64.tar.gz"
-      sha256 "491bc586fd370cd3a75cac9277d7d462f7d7027b4b9f93e4f5f0a275f4b33cc1"
+      url "https://downloads.reqproof.com/releases/0.1.0-main.20260821214335/proof_0.1.0-main.20260821214335_linux_amd64.tar.gz"
+      sha256 "8f3ae5d2748e0feeed5d50174ab4c1b0daaf492f955e4981b9c89971a2636afb"
     end
   end
 
@@ -31,6 +31,6 @@ class Proof < Formula
   test do
     output = shell_output("\#{bin}/proof version")
     assert_match "proof", output
-    assert_match "0.1.0-main.20260821204932", output
+    assert_match "0.1.0-main.20260821214335", output
   end
 end
